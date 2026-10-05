@@ -9,13 +9,13 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Jaden's Homepage"
+title                    : "Jianheng Hou"
 title_separator          : "-"
-name                     : &name "Jianheng(Jaden) Hou"
-description              : &description "Sr. Machine learning Engineer @ Tesla"
-url                      : https://jianhenghou.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+name                     : &name "Jianheng (Jaden) Hou"
+description              : &description "Jianheng (Jaden) Hou — Senior Machine Learning Engineer working on agentic AI, evaluation, and production ML systems."
+url                      : https://jianhenghou.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/jianhenghou.github.io"
+repository               : "JianhengHou/jianhenghou.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -129,13 +129,17 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Jianheng (Jaden) Hou"
+  links:
+    - "https://scholar.google.com/citations?user=aTnf82QAAAAJ&hl=en"
+    - "https://github.com/JianhengHou"
+    - "https://www.linkedin.com/in/jadenhou"
+    - "https://openreview.net/profile?id=~Jianheng_Hou1"
 
 
 # Analytics
