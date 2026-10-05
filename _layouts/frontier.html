@@ -1,0 +1,233 @@
+{% include base_path %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}">
+<head>
+  <meta charset="utf-8">
+  {% include seo.html %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ base_path }}/images/favicon.svg">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ base_path }}/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  /* ============ Frontier × Tesla design system ============ */
+  :root{
+    --bg:#0a0a0b;
+    --bg-2:#0f0f11;
+    --surface:#141517;
+    --surface-2:#1a1b1e;
+    --line:rgba(255,255,255,0.08);
+    --line-2:rgba(255,255,255,0.16);
+    --text:#f1f2f4;
+    --dim:#b2b6bd;
+    --faint:#6f747c;
+    --accent:#7aa2f7;
+    --accent-soft:#9bb2e2;
+    --serif:'Newsreader',Georgia,'Times New Roman',serif;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    --maxw:1080px;
+    --r:16px;
+    --r-sm:11px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html{overflow-x:clip}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16.5px;line-height:1.66;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  strong{font-weight:600;color:var(--text)}
+  em{font-style:italic;color:var(--dim)}
+  ::selection{background:#fff;color:#000}
+
+  /* ambient background — very subtle, flat academic feel */
+  body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+    radial-gradient(1100px 680px at 82% -18%, rgba(122,162,247,0.06), transparent 62%);
+    pointer-events:none}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+
+  /* ---- nav ---- */
+  .fr-nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(16px);
+    background:rgba(6,6,7,0.62);border-bottom:1px solid var(--line)}
+  .fr-nav__in{max-width:var(--maxw);margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .fr-brand{font-family:var(--serif);font-weight:500;font-size:1.08rem;letter-spacing:0;color:var(--text);white-space:nowrap}
+  .fr-brand .dot{color:var(--accent)}
+  .fr-links{display:flex;gap:28px}
+  .fr-links a{font-size:.9rem;color:var(--dim);letter-spacing:0;transition:color .15s}
+  .fr-links a:hover{color:var(--accent)}
+  .fr-social{display:flex;gap:16px;align-items:center}
+  .fr-social a{color:var(--faint);display:inline-flex;transition:color .15s}
+  .fr-social a:hover{color:var(--accent)}
+  .fr-social svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .fr-right{display:flex;align-items:center;gap:22px}
+  .fr-loc{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;color:var(--dim);white-space:nowrap}
+  .fr-loc svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---- sections ---- */
+  section{padding:84px 0;border-top:1px solid var(--line)}
+  section.hero{border-top:none;padding:76px 0 40px}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+  .sec-head::before{content:"";width:22px;height:1px;background:var(--accent);opacity:.85;flex:0 0 auto}
+  .sec-head .idx{display:none}
+  .sec-head h2{font-family:var(--serif);font-size:1.4rem;font-weight:500;letter-spacing:0;text-transform:none;color:var(--text)}
+
+  /* ---- hero (restrained academic header) ---- */
+  .hero{padding:62px 0 48px}
+  .hero__grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+  .eyebrow{font-family:var(--sans);font-size:.84rem;font-weight:500;letter-spacing:.01em;text-transform:none;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);opacity:.7}
+  .hero h1{font-family:var(--serif);font-size:clamp(2.2rem,4.8vw,3.4rem);font-weight:500;letter-spacing:-.01em;line-height:1.04;margin-bottom:20px}
+  .hero h1 .grey{color:var(--faint);font-style:italic;font-weight:400}
+  .hero .lede{font-size:clamp(1.02rem,1.8vw,1.16rem);color:var(--dim);max-width:600px;line-height:1.6;margin-bottom:22px}
+  .hero__meta{display:flex;flex-wrap:wrap;gap:6px 20px;color:var(--dim);font-size:.92rem}
+  .hero__meta span{display:inline-flex;align-items:center;gap:8px}
+  .hero__meta a{color:var(--text);border-bottom:1px solid var(--accent-soft)}
+  .hero__meta a:hover{border-color:var(--accent);color:var(--accent)}
+  .hero__meta svg{width:15px;height:15px;stroke:var(--faint);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .hero__photo{position:relative}
+  .hero__photo img{width:172px;height:172px;object-fit:cover;border-radius:18px;border:1px solid var(--line-2);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+
+  /* ---- prose ---- */
+  .prose p{color:var(--dim);margin-bottom:1.1em;max-width:720px}
+  .prose a{color:var(--text);border-bottom:1px solid var(--accent-soft);transition:border-color .15s,color .15s}
+  .prose a:hover{border-color:var(--accent);color:var(--accent)}
+  .statement{font-family:var(--serif);font-size:clamp(1.25rem,2.3vw,1.62rem);font-weight:400;letter-spacing:0;line-height:1.48;max-width:780px;color:var(--text);margin-bottom:26px}
+  .statement .muted{color:var(--accent-soft);font-style:italic}
+
+  /* ---- research interests (text list) ---- */
+  .interests{list-style:none}
+  .interests li{padding:16px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.98rem;line-height:1.6;max-width:800px}
+  .interests li:last-child{border-bottom:none}
+  .interests li strong{color:var(--text);font-weight:600}
+
+  /* ---- experience (CV rows) ---- */
+  .xp-row{padding:18px 0;border-bottom:1px solid var(--line);max-width:860px}
+  .xp-row:last-child{border-bottom:none}
+  .xp-row h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;margin-bottom:6px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .xp-row .xp-tag{font-family:var(--sans);font-size:.76rem;letter-spacing:0;text-transform:none;color:var(--accent-soft);font-weight:500}
+  .xp-row p{font-size:.95rem;color:var(--dim);line-height:1.64}
+
+  /* ---- news ---- */
+  .news-row{display:grid;grid-template-columns:118px 1fr;gap:26px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .news-row:last-child{border-bottom:none}
+  .news-row .date{font-family:var(--mono);font-size:.76rem;color:var(--accent-soft);letter-spacing:.01em;padding-top:3px}
+  .news-row .body{color:var(--dim);font-size:.97rem;line-height:1.64}
+  .news-row .body a{color:var(--text);border-bottom:1px solid var(--accent-soft)}
+  .news-row .body a:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ---- publications / projects ---- */
+  .stack{display:flex;flex-direction:column;gap:16px}
+  .pub{display:grid;grid-template-columns:208px 1fr;gap:24px;align-items:start}
+  .pub__thumb{border-radius:12px;overflow:hidden;background:#fff;aspect-ratio:208/128;border:1px solid var(--line)}
+  .pub__thumb img{width:100%;height:100%;object-fit:contain}
+  .pub h3{font-family:var(--serif);font-size:1.22rem;font-weight:500;letter-spacing:0;line-height:1.3;margin-bottom:9px}
+  .pub h3 a:hover{color:var(--accent);opacity:1}
+  .pub .authors{font-size:.86rem;color:var(--dim);margin-bottom:11px;line-height:1.55}
+  .pub .authors .me{color:var(--text);font-weight:600}
+  .pub .meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:11px}
+  .badge{font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:0;padding:3px 10px;border-radius:6px;border:1px solid var(--line-2);color:var(--dim);background:var(--bg-2);white-space:nowrap}
+  .badge.accepted{color:#1b1610;background:var(--accent);border-color:var(--accent);font-weight:600}
+  .badge.oss{color:var(--text);border-color:var(--line-2);background:rgba(237,228,214,.05)}
+  .reslinks{display:flex;gap:16px;font-family:var(--sans);font-size:.82rem;flex-wrap:wrap}
+  .reslinks a{color:var(--accent-soft);transition:color .15s}
+  .reslinks a:hover{color:var(--accent)}
+  .pub .desc{font-size:.9rem;color:#a89f90;line-height:1.62}
+  .pub.featured{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:22px}
+
+  /* ---- service ---- */
+  .svc-row{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .svc-row:last-child{border-bottom:none}
+  .svc-row .role{font-family:var(--sans);font-size:.82rem;font-weight:500;letter-spacing:0;text-transform:none;color:var(--accent-soft)}
+  .svc-row .what{color:var(--dim);font-size:.95rem}
+  .svc-row .what strong{color:var(--text)}
+
+  /* ---- life ---- */
+  .life-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .life-item{display:flex;gap:15px;align-items:flex-start;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface);transition:border-color .2s}
+  .life-item:hover{border-color:var(--line-2)}
+  .life-item svg{flex:0 0 auto;width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:3px;opacity:.95}
+  .life-item .t{font-family:var(--serif);font-weight:500;font-size:1.06rem;margin-bottom:3px}
+  .life-item .d{font-size:.88rem;color:var(--dim);line-height:1.55}
+
+  /* ---- footer ---- */
+  .fr-footer{border-top:1px solid var(--line);padding:38px 0 54px;color:var(--faint);font-size:.8rem}
+  .fr-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .fr-footer .mono{font-family:var(--mono);letter-spacing:.02em}
+  .fr-footer a{color:var(--dim)}
+  .fr-footer a:hover{color:var(--text)}
+
+  /* ---- reveal: minimal opacity-only fade (no motion flourish) ---- */
+  [data-reveal]{opacity:0;transition:opacity .5s ease}
+  [data-reveal].in{opacity:1}
+
+  /* ---- responsive ---- */
+  @media (max-width:860px){
+    .grid-3{grid-template-columns:1fr}
+    .hero__grid{grid-template-columns:1fr;gap:34px}
+    .hero__photo{order:-1}
+    .hero__photo img{width:150px;height:150px;border-radius:20px}
+    .fr-links,.fr-loc{display:none}
+  }
+  @media (max-width:640px){
+    .wrap,.fr-nav__in,.fr-footer .wrap{padding-left:20px;padding-right:20px}
+    section{padding:60px 0}
+    .grid-2,.life-grid{grid-template-columns:1fr}
+    .pub{grid-template-columns:1fr;gap:14px}
+    .pub__thumb{aspect-ratio:16/9}
+    .news-row{grid-template-columns:1fr;gap:4px}
+    .svc-row{grid-template-columns:1fr;gap:3px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto}
+    [data-reveal]{opacity:1;transform:none;transition:none}
+    .card:hover,.life-item:hover,.pill:hover{transform:none}
+  }
+  </style>
+</head>
+<body>
+  <nav class="fr-nav">
+    <div class="fr-nav__in">
+      <a class="fr-brand" href="#top">JH<span class="dot">.</span></a>
+      <div class="fr-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Research</a>
+        <a href="#projects">Open Source</a>
+        <a href="#life">Life</a>
+      </div>
+      <div class="fr-right">
+        <span class="fr-loc"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Bay Area, CA</span>
+        <div class="fr-social">
+        <a href="mailto:{{ site.author.email }}" aria-label="Email"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener" aria-label="Google Scholar"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg></a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <span id="top"></span>
+  {{ content }}
+
+  <footer class="fr-footer">
+    <div class="wrap">
+      <span class="mono">© {{ site.time | date: "%Y" }} Jianheng (Jaden) Hou</span>
+      <span class="mono">Built with Jekyll · Deployed on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    var els=document.querySelectorAll('[data-reveal]');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:0.1,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  });
+  </script>
+</body>
+</html>
