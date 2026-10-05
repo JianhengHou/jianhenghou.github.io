@@ -1,8 +1,8 @@
 ---
 layout: frontier
 permalink: /
-title: "Jianheng (Jaden) Hou"
-description: "Jianheng (Jaden) Hou — Senior Machine Learning Engineer working on agentic AI, evaluation, and production ML systems."
+title: "Jianheng Hou · Jaden Hou"
+description: "Jianheng Hou (Jaden Hou) — Senior Machine Learning Engineer working on agentic AI, evaluation, and production ML systems."
 header:
   image: profile.png
 ---

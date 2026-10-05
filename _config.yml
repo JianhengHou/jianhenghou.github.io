@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Jianheng Hou"
+title                    : "Jianheng Hou · Jaden Hou"
 title_separator          : "-"
 name                     : &name "Jianheng (Jaden) Hou"
-description              : &description "Jianheng (Jaden) Hou — Senior Machine Learning Engineer working on agentic AI, evaluation, and production ML systems."
+description              : &description "Jianheng Hou (Jaden Hou) — Senior Machine Learning Engineer working on agentic AI, evaluation, and production ML systems."
 url                      : https://jianhenghou.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "JianhengHou/jianhenghou.github.io"
