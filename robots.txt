@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jianhenghou.github.io/pages-sitemap.xml
+Sitemap: https://jianhenghou.github.io/sitemap.txt
