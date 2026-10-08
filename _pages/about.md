@@ -54,11 +54,11 @@ header:
   <div class="wrap">
     <div class="sec-head"><span class="idx">03</span><h2>News</h2></div>
     <div class="news">
+      <div class="news-row"><div class="date">Sep 2026</div><div class="body"><strong>SkillsBench</strong> — benchmarking how well agent skills work across diverse tasks — was accepted to <strong>NeurIPS 2026</strong>. <a href="https://arxiv.org/abs/2602.12670">Paper →</a></div></div>
       <div class="news-row"><div class="date">Aug 2026</div><div class="body"><strong>Matraix</strong> was featured on <a href="https://huggingface.co/papers/2608.04205">Hugging Face Daily Papers</a> and covered by <a href="https://www.forbes.com.tr/saglik/hastaya-dokunmadan-once-8-3-milyar-kez-denemek-sagligin-yeni-test-dunyasi-matraix"><strong>Forbes</strong></a>, <a href="https://www.wired.cz/news-beat/harvard-a-mit-vytvorily-ai-simulaci-obsahujici-83-miliardy-virtualnich-lidi"><strong>WIRED</strong> (Czech)</a>, <a href="https://www.nzz.ch/nzz-am-sonntag/report-und-debatte/die-ki-vermessung-der-menschheit-unsere-acht-milliarden-doppelgaenger-ld.10019342"><em>NZZ am Sonntag</em></a>, <a href="https://www.numerama.com/tech/2308727-ces-chercheurs-ont-cree-83-milliards-dhumains-virtuels-pour-tester-des-produits-a-notre-place.html"><em>Numerama</em></a>, <a href="https://www.infobae.com/tecno/2026/08/10/asi-prueba-la-ia-un-mundo-con-8300-millones-de-personas-digitales-matraix-es-el-metaverso/"><em>Infobae</em></a>, <a href="https://www.aitimes.com/news/articleView.html?idxno=213824"><em>AI타임스</em></a>, and <a href="https://www.36kr.com/p/3932853833759876"><em>36Kr</em></a>, among others — and trended as an <strong>X Trending Story</strong>.</div></div>
       <div class="news-row"><div class="date">Aug 2026</div><div class="body">We released the <strong>Matraix</strong> technical report — a world-simulation platform with <strong>8.3 billion persona agents</strong> — on arXiv, published the <strong>Persona 1M</strong> dataset on Hugging Face, and open-sourced the platform as <a href="https://github.com/MatrAIx-ai/MatrAIx-Persona-8B">MatrAIx-Persona-8B</a> (<strong>2k+ ★</strong>). <a href="https://arxiv.org/abs/2608.04205">Paper →</a></div></div>
       <div class="news-row"><div class="date">Jul 2026</div><div class="body"><strong>PersonaEval</strong> and <strong>Position: Synthetic Persona Needs Explicit Grounding</strong> were accepted to the <strong>COLM 2026 Workshop</strong> on Social Simulation with LLMs.</div></div>
       <div class="news-row"><div class="date">Apr 2026</div><div class="body"><strong>A Very Big Video Reasoning Suite</strong> was accepted to <strong>ICML 2026</strong>. <a href="https://arxiv.org/abs/2602.20159">Paper →</a></div></div>
-      <div class="news-row"><div class="date">Feb 2026</div><div class="body"><strong>SkillsBench</strong> — benchmarking how well agent skills work across diverse tasks — went public. <a href="https://arxiv.org/abs/2602.12670">Paper →</a></div></div>
     </div>
   </div>
 </section>
@@ -103,7 +103,7 @@ header:
         <div>
           <h3><a href="https://arxiv.org/abs/2602.12670">SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks</a></h3>
           <div class="authors">Xiangyi Li, Yimin Liu, Wenbo Chen, Bingran You, Zonglin Di, …, <span class="me">Jianheng Hou</span>, …, Yizhou Sun, Wei Wang, Dawn Song</div>
-          <div class="meta"><span class="badge">arXiv 2026</span><span class="reslinks"><a href="https://skillsbench.ai/">Project</a><a href="https://arxiv.org/abs/2602.12670">Paper</a></span></div>
+          <div class="meta"><span class="badge accepted">NeurIPS 2026</span><span class="reslinks"><a href="https://skillsbench.ai/">Project</a><a href="https://arxiv.org/abs/2602.12670">Paper</a></span></div>
           <p class="desc">A paired benchmark that measures whether curated Agent Skills actually help LLM agents, using deterministic verifiers across 87 tasks and 8 domains.</p>
         </div>
       </div>
@@ -184,7 +184,7 @@ header:
     <div class="sec-head"><span class="idx">06</span><h2>Service</h2></div>
     <div class="svc">
       <div class="svc-row"><div class="role">Reviewer</div><div class="what"><strong>IEEE Transactions on Knowledge and Data Engineering</strong> (TKDE), 2026</div></div>
-      <div class="svc-row"><div class="role">Reviewer</div><div class="what"><strong>Conference on Language Modeling</strong> (COLM), 2025</div></div>
+      <div class="svc-row"><div class="role">Reviewer</div><div class="what"><strong>Conference on Language Modeling</strong> (COLM), 2026</div></div>
       <div class="svc-row"><div class="role">Reviewer</div><div class="what"><strong>KDD 2026 Workshop</strong> on Agentic AI</div></div>
     </div>
   </div>
