@@ -54,6 +54,7 @@ header:
   <div class="wrap">
     <div class="sec-head"><span class="idx">03</span><h2>News</h2></div>
     <div class="news">
+      <div class="news-row"><div class="date">Oct 2026</div><div class="body"><strong>AgentPersonaBench (APB)</strong> — a benchmark for whether persona traits actually steer what agents do — went public. <a href="https://arxiv.org/abs/2610.04379">Paper →</a></div></div>
       <div class="news-row"><div class="date">Sep 2026</div><div class="body"><strong>SkillsBench</strong> — benchmarking how well agent skills work across diverse tasks — was accepted to <strong>NeurIPS 2026</strong>. <a href="https://arxiv.org/abs/2602.12670">Paper →</a></div></div>
       <div class="news-row"><div class="date">Aug 2026</div><div class="body"><strong>Matraix</strong> was featured on <a href="https://huggingface.co/papers/2608.04205">Hugging Face Daily Papers</a> and covered by <a href="https://www.forbes.com.tr/saglik/hastaya-dokunmadan-once-8-3-milyar-kez-denemek-sagligin-yeni-test-dunyasi-matraix"><strong>Forbes</strong></a>, <a href="https://www.wired.cz/news-beat/harvard-a-mit-vytvorily-ai-simulaci-obsahujici-83-miliardy-virtualnich-lidi"><strong>WIRED</strong> (Czech)</a>, <a href="https://www.nzz.ch/nzz-am-sonntag/report-und-debatte/die-ki-vermessung-der-menschheit-unsere-acht-milliarden-doppelgaenger-ld.10019342"><em>NZZ am Sonntag</em></a>, <a href="https://www.numerama.com/tech/2308727-ces-chercheurs-ont-cree-83-milliards-dhumains-virtuels-pour-tester-des-produits-a-notre-place.html"><em>Numerama</em></a>, <a href="https://www.infobae.com/tecno/2026/08/10/asi-prueba-la-ia-un-mundo-con-8300-millones-de-personas-digitales-matraix-es-el-metaverso/"><em>Infobae</em></a>, <a href="https://www.aitimes.com/news/articleView.html?idxno=213824"><em>AI타임스</em></a>, and <a href="https://www.36kr.com/p/3932853833759876"><em>36Kr</em></a>, among others — and trended as an <strong>X Trending Story</strong>.</div></div>
       <div class="news-row"><div class="date">Aug 2026</div><div class="body">We released the <strong>Matraix</strong> technical report — a world-simulation platform with <strong>8.3 billion persona agents</strong> — on arXiv, published the <strong>Persona 1M</strong> dataset on Hugging Face, and open-sourced the platform as <a href="https://github.com/MatrAIx-ai/MatrAIx-Persona-8B">MatrAIx-Persona-8B</a> (<strong>2k+ ★</strong>). <a href="https://arxiv.org/abs/2608.04205">Paper →</a></div></div>
@@ -75,6 +76,16 @@ header:
           <div class="authors">Xiaomin Li, Yuexing Hao, <span class="me">Jianheng Hou</span>, Jintao Huang, Qianfeng Wen, Shirley Huang, Yifan Liu, Xiaoyi Liu, Yilan Fan, …, Marinka Zitnik, James Zou, Philip Torr, Emily Fox, Asu Ozdaglar, Dawn Song</div>
           <div class="meta"><span class="badge">arXiv 2026</span><span class="reslinks"><a href="https://matraix.ai/">Project</a><a href="https://arxiv.org/abs/2608.04205">Paper</a><a href="https://github.com/MatrAIx-ai/MatrAIx-Persona-8B">Code</a><a href="https://huggingface.co/datasets/MatrAIx2026/MatrAIx_Persona_1M_Public_Release">HuggingFace</a></span></div>
           <p class="desc">A population-scale, persona-driven infrastructure that instantiates 8.3B persona agents to evaluate AI systems and interactive products across surveys, chatbots, web, and apps.</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub__thumb"><img src="/images/pubs/apb.png" alt="AgentPersonaBench"></div>
+        <div>
+          <h3><a href="https://arxiv.org/abs/2610.04379">AgentPersonaBench: Benchmarking Persona-Driven User Simulation</a></h3>
+          <div class="authors">Jintao Huang, Yifan Wang, Hongyu Shen, Yi Daniel Lu, Shirley Huang, …, Yifan Simon Liu, <span class="me">Jianheng Hou</span>, <em>… et al.</em></div>
+          <div class="meta"><span class="badge">arXiv 2026</span><span class="reslinks"><a href="https://matraix.ai/research/agent-personabench.html">Project</a><a href="https://arxiv.org/abs/2610.04379">Paper</a><a href="https://github.com/MatrAIx-ai/AgentPersonaBench">Code</a></span></div>
+          <p class="desc">A benchmark for latent persona adherence — 2,460 tasks across survey, chat, web, and desktop app, scored from what the agent does, not what it says about itself.</p>
         </div>
       </div>
 
@@ -154,6 +165,15 @@ header:
           <h3><a href="https://github.com/MatrAIx-ai/MatrAIx-Persona-8B">MatrAIx-Persona-8B</a></h3>
           <div class="meta"><span class="badge oss">Open Source · 2k+ ★</span><span class="reslinks"><a href="https://github.com/MatrAIx-ai/MatrAIx-Persona-8B">GitHub</a><a href="https://matraix.ai/">Website</a><a href="https://huggingface.co/datasets/MatrAIx2026/MatrAIx_Persona_1M_Public_Release">HuggingFace</a><a href="https://arxiv.org/abs/2608.04205">Paper</a></span></div>
           <p class="desc"><strong>Lead builder &amp; core architect.</strong> I drove the end-to-end design and engineering of this population-scale, persona-driven infrastructure — from the 1,290-dimension persona schema and 1M-persona public coreset to the simulation runtime and evaluation pipeline.</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub__thumb"><img src="/images/pubs/apb.png" alt="AgentPersonaBench"></div>
+        <div>
+          <h3><a href="https://github.com/MatrAIx-ai/AgentPersonaBench">AgentPersonaBench</a></h3>
+          <div class="meta"><span class="badge oss">Open Source</span><span class="reslinks"><a href="https://github.com/MatrAIx-ai/AgentPersonaBench">GitHub</a><a href="https://matraix.ai/research/agent-personabench.html">Website</a><a href="https://arxiv.org/abs/2610.04379">Paper</a></span></div>
+          <p class="desc">Open tasks, harness, and leaderboard for whether a persona trait actually steers agent behavior across survey, chat, web, and desktop-app environments.</p>
         </div>
       </div>
 
