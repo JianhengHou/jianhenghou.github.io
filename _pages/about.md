@@ -41,11 +41,47 @@ header:
 <section id="experience" data-reveal>
   <div class="wrap">
     <div class="sec-head"><span class="idx">02</span><h2>Experience</h2></div>
-    <div class="prose">
-      <p>My path runs through AI &amp; manufacturing, media &amp; telecom, and venture capital — most recently at <a href="https://www.tesla.com/AI">Tesla</a>, where I engineer <strong>enterprise AI and agentic ecosystems</strong> from <em>first principles</em>, turning frontier research into AI products that ship under real, high-stakes constraints.</p>
-      <p>At <a href="https://www.comcast.com/"><strong>Comcast</strong></a>, I was in an enterprise ML/DS rotation delivering applied machine learning and data science across a product's entire surface — growth, UX, finance, and workforce — reading a product <em>360°</em> through a DS/ML lens. At the venture firm <a href="https://www.alphaedison.com/"><strong>Alpha Edison</strong></a>, I built an <strong>AI decision-making</strong> engine for proactive investing — NLP, causal inference, and time-series anomaly detection — with a sharp instinct for locking onto the real pain points and opportunities, and for <em>where value is actually created</em>.</p>
-      <p>I take a class of concrete problems and abstract them into a research problem to solve. At USC's <a href="https://www.isi.edu/centers-ckg/">Information Sciences Institute</a>, on the DARPA LORELEI <a href="https://usc-isi-i2.github.io/thor/">THOR Project</a>, that meant knowledge graphs, entity resolution, and online clustering — later taken into <a href="https://www.defense.gov/">U.S. DoD</a> settings — mentored by <a href="https://scholar.google.com/citations?user=U1A6iBMAAAAJ&hl=en">Pedro Szekely</a> and <a href="https://scholar.google.com/citations?user=fetkEu4AAAAJ&hl=en">Mayank Kejriwal</a>. I hold an M.S. in Computer Science (Applied Data Science) from the <a href="https://viterbischool.usc.edu/">Viterbi School of Engineering</a> at the <a href="https://www.usc.edu/">University of Southern California</a>.</p>
-      <p>The through-line is a rare, end-to-end fluency across the full arc — from locking onto a pain point or opportunity, through research and first-principles engineering, to a product running in production.</p>
+    <div class="arc-stage">
+      <svg class="arc-svg" viewBox="0 0 960 640" role="img" aria-label="Four chapters, each with a lens and a craft">
+        <path class="ring-out" d="M 390.9 209.8 A 148 148 0 0 1 569.1 209.8"/>
+        <path class="ring-in ring-tesla" d="M 412.6 238.6 A 112 112 0 0 1 547.4 238.6"/>
+        <path class="ring-out" d="M 598.2 238.9 A 148 148 0 0 1 598.2 417.1"/>
+        <path class="ring-in ring-isi" d="M 569.4 260.6 A 112 112 0 0 1 569.4 395.4"/>
+        <path class="ring-out" d="M 569.1 446.2 A 148 148 0 0 1 390.9 446.2"/>
+        <path class="ring-in ring-alpha" d="M 547.4 417.4 A 112 112 0 0 1 412.6 417.4"/>
+        <path class="ring-out" d="M 361.8 417.1 A 148 148 0 0 1 361.8 238.9"/>
+        <path class="ring-in ring-comcast" d="M 390.6 395.4 A 112 112 0 0 1 390.6 260.6"/>
+        <path class="ring-arrow" d="M 597.2 443.6 L 594.9 453.5 L 604.8 451.2"/>
+        <path class="ring-arrow" d="M 364.4 445.2 L 354.5 442.9 L 356.8 452.8"/>
+        <path class="ring-arrow" d="M 362.8 212.4 L 365.1 202.5 L 355.2 204.8"/>
+        <text class="c-k" x="480" y="312" text-anchor="middle">THE ARC</text>
+        <text class="c-l" x="480" y="342" text-anchor="middle">pain point</text>
+        <text class="c-s" x="480" y="366" text-anchor="middle">to production</text>
+      </svg>
+      <a class="node n-tesla" href="https://www.tesla.com/AI">
+        <span class="co">Tesla <em>now</em></span>
+        <span class="soft">Global impact, production-driven</span>
+        <span class="hard">Agent / ML engineering</span>
+      </a>
+      <a class="node n-comcast" href="https://www.comcast.com/">
+        <span class="co">Comcast</span>
+        <span class="soft">Enterprise strategy</span>
+        <span class="hard">360° ML/DS-driven product</span>
+      </a>
+      <a class="node n-alpha" href="https://www.alphaedison.com/">
+        <span class="co">Alpha Edison</span>
+        <span class="soft">Entrepreneurship</span>
+        <span class="hard">ML &amp; quantitative decision engine</span>
+      </a>
+      <a class="node n-isi" href="https://www.isi.edu/centers-ckg/">
+        <span class="co">ISI</span>
+        <span class="soft">Innovative thinking</span>
+        <span class="hard">ML research</span>
+      </a>
+    </div>
+    <p class="arc-key">Outer ring, the <i>lens</i>. Inner ring, the craft.</p>
+    <div class="prose arc-copy">
+      <p>My path runs through AI and manufacturing, media and telecom, and venture capital — most recently at <a href="https://www.tesla.com/AI">Tesla</a>, where I engineer enterprise AI and agentic systems from first principles, into products that ship under real constraints. At <a href="https://www.comcast.com/">Comcast</a>, an enterprise ML/DS rotation, reading a product 360° through a DS/ML lens. At <a href="https://www.alphaedison.com/">Alpha Edison</a>, an ML and quantitative decision engine for investing, aimed at the real pain points and where value is actually created. I take concrete problems and abstract them into research problems. At the <a href="https://www.usc.edu/">University of Southern California</a>'s <a href="https://www.isi.edu/centers-ckg/">Information Sciences Institute</a>, on the DARPA LORELEI <a href="https://usc-isi-i2.github.io/thor/">THOR Project</a>, that meant knowledge graphs, entity resolution, and online clustering, later applied in <a href="https://www.defense.gov/">U.S. DoD</a> settings, mentored by <a href="https://scholar.google.com/citations?user=U1A6iBMAAAAJ&hl=en">Pedro Szekely</a> and <a href="https://scholar.google.com/citations?user=fetkEu4AAAAJ&hl=en">Mayank Kejriwal</a>. I hold an M.S. in Computer Science (Applied Data Science) from the <a href="https://viterbischool.usc.edu/">Viterbi School of Engineering</a> at the <a href="https://www.usc.edu/">University of Southern California</a>.</p>
     </div>
   </div>
 </section>
