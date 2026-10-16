@@ -74,9 +74,9 @@ header:
         <span class="hard">ML &amp; quantitative decision engine</span>
       </a>
       <a class="node n-isi" href="https://www.isi.edu/centers-ckg/">
-        <span class="co">ISI</span>
+        <span class="co">Information Sciences<br>Institute</span>
         <span class="soft">Innovative thinking</span>
-        <span class="hard">ML research</span>
+        <span class="hard">NLP research</span>
       </a>
     </div>
     <p class="arc-key">Outer ring, the <i>lens</i>. Inner ring, the craft.</p>
